@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huellitas Felices · Comida natural para perros</title>
+<meta name="description" content="Alimento natural para perros, con envío a domicilio. Elegí la receta ideal para tu compañero y recibila en casa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crema:#FFF7EC;
+  --crema-2:#FDEBD3;
+  --terracota:#D9663A;
+  --terracota-osc:#B94E26;
+  --miel:#F2A541;
+  --cacao:#3B2417;
+  --cacao-suave:#6B5043;
+  --salvia:#7C9266;
+  --blanco:#FFFFFF;
+  --rosa:#F6C9B5;
+  --radio:22px;
+  --sombra:0 14px 40px rgba(59,36,23,.12);
+  --f-titulo:'Fraunces',Georgia,serif;
+  --f-texto:'DM Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f-texto);color:var(--cacao);background:var(--crema);line-height:1.6;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-titulo);line-height:1.12;letter-spacing:-.01em}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section{padding:84px 0}
+.eyebrow{display:inline-block;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--terracota);margin-bottom:12px}
+.section-title{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:14px}
+.section-sub{color:var(--cacao-suave);max-width:560px;font-size:1.05rem}
+.center{text-align:center}.center .section-sub{margin-inline:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 1rem var(--f-texto);padding:16px 30px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s;min-height:52px}
+.btn-primary{background:var(--terracota);color:#fff;box-shadow:0 10px 24px rgba(217,102,58,.35)}
+.btn-primary:hover{background:var(--terracota-osc);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--cacao);border:2px solid var(--cacao)}
+.btn-ghost:hover{background:var(--cacao);color:var(--crema)}
+.btn:disabled{background:#cdbfb3;box-shadow:none;cursor:not-allowed;transform:none;color:#fff}
+:focus-visible{outline:3px solid var(--miel);outline-offset:3px}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,247,236,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(59,36,23,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font:800 1.25rem var(--f-titulo);text-decoration:none}
+.logo span.dot{width:34px;height:34px;border-radius:50%;background:var(--terracota);display:grid;place-items:center;font-size:1.05rem}
+.nav-links{display:flex;gap:28px;font-weight:500}
+.nav-links a{text-decoration:none;color:var(--cacao-suave)}
+.nav-links a:hover{color:var(--terracota)}
+.cart-btn{position:relative;background:var(--cacao);color:var(--crema);border:0;border-radius:999px;padding:10px 18px;font:700 .95rem var(--f-texto);cursor:pointer;display:flex;gap:8px;align-items:center}
+.cart-count{background:var(--miel);color:var(--cacao);border-radius:999px;min-width:22px;height:22px;display:grid;place-items:center;font-size:.8rem;padding:0 6px}
+
+/* Hero */
+.hero{padding:56px 0 90px;background:radial-gradient(circle at 85% 20%,var(--crema-2),transparent 55%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6.2vw,4rem);font-weight:800;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--terracota)}
+.hero p.lead{font-size:1.15rem;color:var(--cacao-suave);max-width:520px;margin-bottom:30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+.trust{display:flex;gap:22px;flex-wrap:wrap;font-size:.92rem;color:var(--cacao-suave);font-weight:500}
+.trust span::before{content:"✓ ";color:var(--salvia);font-weight:800}
+.hero-visual{position:relative;aspect-ratio:1;max-width:460px;margin-inline:auto;width:100%}
+.blob{position:absolute;inset:0;background:linear-gradient(145deg,var(--miel),var(--terracota));border-radius:58% 42% 52% 48% / 48% 56% 44% 52%;display:grid;place-items:center;box-shadow:var(--sombra)}
+.blob .dog{font-size:clamp(7rem,22vw,11rem);filter:drop-shadow(0 12px 14px rgba(0,0,0,.18))}
+.float{position:absolute;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:var(--sombra);font-size:.88rem;font-weight:700;display:flex;gap:10px;align-items:center}
+.float small{display:block;font-weight:400;color:var(--cacao-suave)}
+.float.a{left:-14px;bottom:14%}
+.float.b{right:-8px;top:8%}
+@media(prefers-reduced-motion:no-preference){.float.a{animation:flot 5s ease-in-out infinite}.float.b{animation:flot 6s ease-in-out infinite reverse}}
+@keyframes flot{50%{transform:translateY(-10px)}}
+
+/* Beneficios */
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.card{background:#fff;border-radius:var(--radio);padding:34px 28px;box-shadow:var(--sombra);transition:transform .25s}
+.card:hover{transform:translateY(-6px)}
+.icon{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;font-size:1.9rem;margin-bottom:20px}
+.icon.i1{background:#FDE3D3}.icon.i2{background:#E7EFD9}.icon.i3{background:#FCE9C2}
+.card h3{font-size:1.3rem;margin-bottom:10px}
+.card p{color:var(--cacao-suave)}
+
+/* Tienda */
+.tienda{background:var(--crema-2)}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:48px}
+.prod{background:#fff;border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra);display:flex;flex-direction:column}
+.prod-img{height:170px;display:grid;place-items:center;font-size:4.4rem;position:relative}
+.prod-tag{position:absolute;top:12px;left:12px;background:#fff;border-radius:999px;font-size:.72rem;font-weight:700;padding:4px 12px;color:var(--cacao)}
+.prod-body{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.prod h3{font-size:1.15rem}
+.prod .desc{font-size:.9rem;color:var(--cacao-suave);flex:1}
+.price{font:800 1.5rem var(--f-titulo)}
+.price small{font:500 .8rem var(--f-texto);color:var(--cacao-suave)}
+.stock{font-size:.82rem;font-weight:700;display:flex;align-items:center;gap:8px}
+.stock .bar{flex:1;height:6px;border-radius:99px;background:#eee1d4;overflow:hidden}
+.stock .bar i{display:block;height:100%;border-radius:99px;background:var(--salvia);transition:width .4s}
+.stock.low{color:var(--terracota-osc)}.stock.low .bar i{background:var(--terracota)}
+.stock.out{color:#8a7a6e}.stock.out .bar i{background:#b9aa9c}
+.prod .btn{width:100%;padding:13px;min-height:46px;font-size:.95rem}
+.shipping-note{text-align:center;margin-top:30px;font-weight:500;color:var(--cacao-suave)}
+
+/* Por qué elegirnos */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.about-photo{aspect-ratio:4/5;border-radius:var(--radio);background:linear-gradient(160deg,var(--rosa),var(--miel));display:grid;place-items:center;font-size:8rem;box-shadow:var(--sombra);position:relative}
+.about-photo .badge{position:absolute;bottom:-18px;right:-10px;background:var(--cacao);color:var(--crema);padding:14px 20px;border-radius:16px;font-weight:700;font-size:.9rem}
+.about p{color:var(--cacao-suave);margin-bottom:16px;font-size:1.05rem}
+.checks{list-style:none;margin:22px 0 30px;display:grid;gap:12px}
+.checks li{display:flex;gap:12px;font-weight:500}
+.checks li::before{content:"🐾";flex:none}
+
+/* Testimonios */
+.testi{background:var(--cacao);color:var(--crema)}
+.testi .section-sub{color:#d8c5b6}
+.testi .eyebrow{color:var(--miel)}
+.t-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--radio);padding:30px 26px}
+.stars{color:var(--miel);letter-spacing:3px;margin-bottom:14px}
+.t-card p{font-size:1.02rem;margin-bottom:22px}
+.who{display:flex;align-items:center;gap:12px;font-weight:700}
+.who small{display:block;font-weight:400;color:#cdb9a8}
+.avatar{width:46px;height:46px;border-radius:50%;background:var(--rosa);display:grid;place-items:center;font-size:1.4rem}
+.rating-row{display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin-top:44px;text-align:center}
+.rating-row b{display:block;font:800 2rem var(--f-titulo);color:var(--miel)}
+
+/* CTA final */
+.final{text-align:center}
+.final-box{background:linear-gradient(135deg,var(--terracota),var(--miel));border-radius:34px;padding:68px 28px;color:#fff;box-shadow:var(--sombra)}
+.final-box h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:14px}
+.final-box p{max-width:520px;margin:0 auto 30px;font-size:1.1rem;opacity:.95}
+.final-box .btn{background:#fff;color:var(--terracota-osc);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.final-box .btn:hover{transform:translateY(-2px)}
+
+/* Footer */
+footer{padding:44px 0 36px;border-top:1px solid rgba(59,36,23,.1);font-size:.92rem;color:var(--cacao-suave)}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot a{text-decoration:none;margin-right:18px}.foot a:hover{color:var(--terracota)}
+.link-btn{background:none;border:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline}
+
+/* Carrito / modales */
+.overlay{position:fixed;inset:0;background:rgba(59,36,23,.5);z-index:90;display:none}
+.overlay.open{display:block}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(440px,100%);background:var(--crema);z-index:100;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.2)}
+.drawer.open{transform:none}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid rgba(59,36,23,.1)}
+.drawer-head h3{font-size:1.4rem}
+.x{background:none;border:0;font-size:1.8rem;cursor:pointer;line-height:1;color:var(--cacao)}
+.drawer-body{flex:1;overflow:auto;padding:20px 24px}
+.empty{text-align:center;color:var(--cacao-suave);padding:50px 0}
+.line{display:grid;grid-template-columns:54px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(59,36,23,.08)}
+.line .em{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;font-size:1.7rem}
+.line b{display:block;font-size:.95rem}
+.line small{color:var(--cacao-suave)}
+.qty{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--cacao-suave);background:#fff;cursor:pointer;font-size:1rem}
+.drawer-foot{padding:20px 24px;border-top:1px solid rgba(59,36,23,.1);background:#fff}
+.total{display:flex;justify-content:space-between;font:800 1.3rem var(--f-titulo);margin-bottom:6px}
+.free{font-size:.85rem;color:var(--salvia);font-weight:700;margin-bottom:14px}
+.modal{position:fixed;inset:0;z-index:110;display:none;place-items:center;padding:16px}
+.modal.open{display:grid}
+.modal-box{background:var(--crema);border-radius:var(--radio);padding:30px;width:min(520px,100%);max-height:92vh;overflow:auto;position:relative}
+.modal-box h3{font-size:1.5rem;margin-bottom:6px}
+.modal-box .x{position:absolute;top:14px;right:18px}
+label{display:block;font-weight:700;font-size:.88rem;margin:14px 0 6px}
+input[type=text],input[type=email],input[type=tel],input[type=number]{width:100%;padding:13px 14px;border:2px solid #e8d7c4;border-radius:12px;font:inherit;background:#fff}
+input:focus{border-color:var(--terracota);outline:none}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.err{color:var(--terracota-osc);font-size:.88rem;margin-top:10px;min-height:1.2em;font-weight:700}
+.ok-box{text-align:center;padding:10px 0}
+.ok-box .big{font-size:3.4rem}
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin:14px 0}
+th,td{text-align:left;padding:9px 6px;border-bottom:1px solid rgba(59,36,23,.1)}
+td input{width:70px;padding:6px 8px}
+.mini{padding:6px 12px;border-radius:99px;border:1px solid var(--cacao);background:#fff;cursor:pointer;font-weight:700;font-size:.8rem}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,120px);background:var(--cacao);color:var(--crema);padding:14px 22px;border-radius:999px;z-index:200;font-weight:700;transition:transform .35s;max-width:calc(100% - 32px);text-align:center}
+.toast.show{transform:translate(-50%,0)}
+
+/* Responsive */
+@media(max-width:980px){.products{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){
+  section{padding:64px 0}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .hero-visual{max-width:340px;order:-1}
+  .cols3{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .about-photo{max-width:360px;margin-inline:auto;width:100%}
+  .hero-ctas .btn{width:100%}
+}
+@media(max-width:520px){
+  .products{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .float.a{left:0}.float.b{right:0}
+  .cart-btn .txt{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="logo"><span class="dot">🐾</span>Huellitas Felices</a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#beneficios">Beneficios</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#nosotras">Nosotras</a>
+      <a href="#opiniones">Opiniones</a>
+    </nav>
+    <button class="cart-btn" id="openCart" aria-label="Abrir carrito">🛒 <span class="txt">Carrito</span> <span class="cart-count" id="cartCount">0</span></button>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Comida natural · Hecha con amor</span>
+        <h1>Lo que come tu perro también es <em>una forma de quererlo</em></h1>
+        <p class="lead">Recetas con ingredientes reales, sin conservantes ni rellenos, pensadas para cada etapa de su vida. Pedí hoy y recibí en casa en 48 horas.</p>
+        <div class="hero-ctas">
+          <a href="#tienda" class="btn btn-primary">Elegir la comida de mi perro →</a>
+          <a href="#beneficios" class="btn btn-ghost">¿Por qué es distinta?</a>
+        </div>
+        <div class="trust">
+          <span>Envío gratis desde $50.000</span>
+          <span>Cambios sin costo</span>
+          <span>Pago seguro</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="blob"><span class="dog">🐶</span></div>
+        <div class="float b">⭐ 4,9/5<small>+1.200 familias</small></div>
+        <div class="float a">🌿 100% natural<small>Sin conservantes</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. BENEFICIOS -->
+  <section id="beneficios">
+    <div class="wrap center">
+      <span class="eyebrow">Beneficios</span>
+      <h2 class="section-title">Cuidamos a tu perro como lo hacés vos</h2>
+      <p class="section-sub">Tres razones por las que cientos de familias eligen Huellitas Felices cada mes.</p>
+      <div class="cols3">
+        <article class="card">
+          <div class="icon i1">🥩</div>
+          <h3>Ingredientes que reconocés</h3>
+          <p>Pollo, salmón, cordero y vegetales frescos. Sin colorantes, sin subproductos y sin sorpresas en la etiqueta.</p>
+        </article>
+        <article class="card">
+          <div class="icon i2">🩺</div>
+          <h3>Formulado con veterinarios</h3>
+          <p>Recetas equilibradas para cachorros, adultos y senior, con foco en digestión, pelaje y energía.</p>
+        </article>
+        <article class="card">
+          <div class="icon i3">🚚</div>
+          <h3>Llega a tu puerta</h3>
+          <p>Envío en 48 horas, envío gratis desde $50.000 y la tranquilidad de nunca quedarte sin alimento.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIENDA -->
+  <section class="tienda" id="tienda">
+    <div class="wrap center">
+      <span class="eyebrow">Tienda</span>
+      <h2 class="section-title">Encontrá la receta ideal</h2>
+      <p class="section-sub">Stock actualizado en tiempo real. Cuando se agota una receta, avisamos en la tarjeta.</p>
+      <div class="products" id="products"></div>
+      <p class="shipping-note">🚚 Envío gratis en compras desde $50.000</p>
+    </div>
+  </section>
+
+  <!-- 3. POR QUÉ ELEGIRNOS -->
+  <section class="about" id="nosotras">
+    <div class="wrap about-grid">
+      <div class="about-photo" aria-hidden="true">👩‍🦰🐕<div class="badge">Familia de perrunas desde 2019</div></div>
+      <div>
+        <span class="eyebrow">Por qué elegirnos</span>
+        <h2 class="section-title">Somos amantes de los perros, igual que vos</h2>
+        <p>Huellitas Felices nació en una cocina, cuando una de nuestras perras empezó a tener problemas digestivos y no encontrábamos nada que la hiciera sentir bien.</p>
+        <p>Hoy preparamos cada receta pensando en tu compañero como si fuera el nuestro. Porque para nosotras, ellos son familia.</p>
+        <ul class="checks">
+          <li>Producción en lotes chicos para garantizar frescura</li>
+          <li>Asesoramiento personalizado por WhatsApp</li>
+          <li>Si tu perro no la acepta, te cambiamos la receta sin costo</li>
+        </ul>
+        <a href="#tienda" class="btn btn-primary">Ver recetas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. TESTIMONIOS -->
+  <section class="testi" id="opiniones">
+    <div class="wrap center">
+      <span class="eyebrow">Prueba social</span>
+      <h2 class="section-title">Ellas ya lo probaron con sus peludos</h2>
+      <p class="section-sub">Historias reales de nuestra comunidad.</p>
+      <div class="cols3" style="text-align:left">
+        <article class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>“Mi Luna tenía el pelo opaco y mucha alergia. A las tres semanas estaba brillante y mucho más activa. No vuelvo a cambiar.”</p>
+          <div class="who"><div class="avatar">👩</div><div>Carolina M.<small>Mamá de Luna, golden</small></div></div>
+        </article>
+        <article class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>“Pedir es facilísimo y llega al día siguiente. Mi Toto, que es muy mañoso, lo devora. Lo recomiendo con los ojos cerrados.”</p>
+          <div class="who"><div class="avatar">👩‍🦱</div><div>Valeria S.<small>Mamá de Toto, caniche</small></div></div>
+        </article>
+        <article class="t-card">
+          <div class="stars">★★★★★</div>
+          <p>“Mi perrita senior volvió a jugar como cuando era chiquita. Y el trato del equipo es cálido, se nota que aman a los perros.”</p>
+          <div class="who"><div class="avatar">👵</div><div>Marta R.<small>Mamá de Canela, mestiza</small></div></div>
+        </article>
+      </div>
+      <div class="rating-row">
+        <div><b>4,9/5</b>valoración promedio</div>
+        <div><b>+1.200</b>familias felices</div>
+        <div><b>98%</b>vuelve a comprar</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CTA FINAL -->
+  <section class="final">
+    <div class="wrap">
+      <div class="final-box">
+        <h2>Tu perro merece lo mejor, hoy</h2>
+        <p>Elegí su receta, hacé tu pedido en menos de dos minutos y recibilo en casa. Si no le encanta, te lo cambiamos.</p>
+        <a href="#tienda" class="btn">Quiero pedir ahora 🐾</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="year"></span> Huellitas Felices · Hecho con amor para perros y sus familias.</div>
+    <div>
+      <a href="#tienda">Tienda</a><a href="#nosotras">Nosotras</a>
+      <button class="link-btn" id="openAdmin" type="button">Panel de stock</button>
+    </div>
+  </div>
+</footer>
+
+<!-- Carrito -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Carrito de compras" aria-hidden="true">
+  <div class="drawer-head"><h3>Tu carrito 🛒</h3><button class="x" id="closeCart" aria-label="Cerrar">×</button></div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot">
+    <div class="total"><span>Total</span><span id="cartTotal">$0</span></div>
+    <div class="free" id="freeMsg"></div>
+    <button class="btn btn-primary" id="checkoutBtn" style="width:100%">Finalizar compra</button>
+  </div>
+</aside>
+
+<!-- Checkout -->
+<div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="coTitle">
+  <div class="modal-box">
+    <button class="x" data-close aria-label="Cerrar">×</button>
+    <div id="coForm">
+      <h3 id="coTitle">Últimos datos 🐶</h3>
+      <p style="color:var(--cacao-suave)">Te contactamos para coordinar pago y entrega.</p>
+      <form id="form" novalidate>
+        <div class="form-grid">
+          <div><label for="fNombre">Nombre y apellido</label><input type="text" id="fNombre" required autocomplete="name"></div>
+          <div><label for="fTel">Teléfono / WhatsApp</label><input type="tel" id="fTel" required autocomplete="tel"></div>
+        </div>
+        <label for="fMail">Email</label><input type="email" id="fMail" required autocomplete="email">
+        <label for="fDir">Dirección de entrega</label><input type="text" id="fDir" required autocomplete="street-address">
+        <div class="err" id="formErr" role="alert"></div>
+        <p style="margin:12px 0;font-weight:700">Total a pagar: <span id="coTotal"></span></p>
+        <button type="submit" class="btn btn-primary" style="width:100%">Confirmar pedido</button>
+      </form>
+    </div>
+    <div class="ok-box" id="coOk" hidden>
+      <div class="big">🎉</div>
+      <h3>¡Pedido confirmado!</h3>
+      <p id="okMsg" style="margin:10px 0 22px;color:var(--cacao-suave)"></p>
+      <button class="btn btn-primary" data-close>Seguir mirando</button>
+    </div>
+  </div>
+</div>
+
+<!-- Panel de stock -->
+<div class="modal" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adTitle">
+  <div class="modal-box" style="width:min(640px,100%)">
+    <button class="x" data-close aria-label="Cerrar">×</button>
+    <h3 id="adTitle">Panel de control de stock</h3>
+    <p style="color:var(--cacao-suave)">Cada venta confirmada descuenta unidades automáticamente.</p>
+    <div style="overflow:auto"><table><thead><tr><th>Producto</th><th>Stock</th><th>Vendidas</th><th>Reponer</th></tr></thead><tbody id="adminRows"></tbody></table></div>
+    <p><b>Ingresos acumulados:</b> <span id="adRev"></span> · <b>Pedidos:</b> <span id="adOrders"></span></p>
+    <button class="mini" id="resetAll" style="margin-top:14px">Reiniciar datos de demostración</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  /* ===== Catálogo y stock inicial ===== */
+  var CATALOGO=[
+    {id:'cachorros',nombre:'Cachorros · Pollo & Arroz',desc:'Alto en proteínas para crecer fuerte y sano.',kg:'3 kg',precio:18900,stock:24,max:24,emoji:'🐶',color:'#FDE3D3',tag:'Más elegida'},
+    {id:'adultos',nombre:'Adultos · Salmón & Batata',desc:'Piel sana, pelo brillante y buena digestión.',kg:'7,5 kg',precio:42500,stock:15,max:15,emoji:'🐕',color:'#FCE9C2',tag:'Omega 3'},
+    {id:'senior',nombre:'Senior · Cordero & Avena',desc:'Cuida articulaciones y energía en la madurez.',kg:'7,5 kg',precio:44900,stock:8,max:8,emoji:'🦮',color:'#E7EFD9',tag:'Articulaciones'},
+    {id:'pequenas',nombre:'Razas pequeñas · Pavo & Zanahoria',desc:'Croquetas chiquitas, ideales para bocas pequeñas.',kg:'3 kg',precio:21500,stock:4,max:4,emoji:'🐩',color:'#F6D9E3',tag:'Mini'}
+  ];
+  var KEY='hf_stock_v1',CKEY='hf_cart_v1',ENVIO_GRATIS=50000;
+  var $=function(s){return document.querySelector(s)};
+  var money=function(n){return '$'+Number(n).toLocaleString('es-AR')};
+
+  function safeGet(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}}
+  function safeSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+
+  var db=safeGet(KEY);
+  function initDb(){
+    db={stock:{},sold:{},revenue:0,orders:0};
+    CATALOGO.forEach(function(p){db.stock[p.id]=p.stock;db.sold[p.id]=0});
+    safeSet(KEY,db);
+  }
+  if(!db||!db.stock)initDb();
+  var cart=safeGet(CKEY)||{};
+
+  function prod(id){return CATALOGO.filter(function(p){return p.id===id})[0]}
+  function disponible(id){return Math.max(0,(db.stock[id]||0)-(cart[id]||0))}
+  function saveCart(){safeSet(CKEY,cart)}
+  function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(function(){t.classList.remove('show')},2600)}
+
+  /* ===== Tienda ===== */
+  function renderProducts(){
+    var h='';
+    CATALOGO.forEach(function(p){
+      var s=db.stock[p.id],cls='',txt='En stock',pct=Math.round(s/p.max*100);
+      if(s<=0){cls='out';txt='Agotado';pct=0}
+      else if(s<=5){cls='low';txt='¡Quedan solo '+s+'!'}
+      else if(s<=10){cls='low';txt='Quedan '+s+' unidades'}
+      var disabled=disponible(p.id)<=0;
+      h+='<article class="prod"><div class="prod-img" style="background:'+p.color+'"><span class="prod-tag">'+p.tag+'</span>'+p.emoji+'</div>'+
+      '<div class="prod-body"><h3>'+p.nombre+'</h3><p class="desc">'+p.desc+'</p>'+
+      '<div class="price">'+money(p.precio)+' <small>/ '+p.kg+'</small></div>'+
+      '<div class="stock '+cls+'"><span>'+txt+'</span><span class="bar"><i style="width:'+Math.min(100,pct)+'%"></i></span></div>'+
+      '<button class="btn btn-primary" data-add="'+p.id+'"'+(disabled?' disabled':'')+'>'+(s<=0?'Agotado':(disabled?'Máximo en carrito':'Agregar al carrito'))+'</button></div></article>';
+    });
+    $('#products').innerHTML=h;
+  }
+
+  /* ===== Carrito ===== */
+  function cartCount(){return Object.keys(cart).reduce(function(a,k){return a+cart[k]},0)}
+  function cartTotal(){return Object.keys(cart).reduce(function(a,k){return a+cart[k]*prod(k).precio},0)}
+  function clampCart(){ // si el stock bajó, ajusta el carrito
+    Object.keys(cart).forEach(function(k){
+      if(!prod(k)||db.stock[k]<=0)delete cart[k];
+      else if(cart[k]>db.stock[k])cart[k]=db.stock[k];
+    });
+  }
+  function renderCart(){
+    clampCart();saveCart();
+    $('#cartCount').textContent=cartCount();
+    var ids=Object.keys(cart),body=$('#cartBody');
+    if(!ids.length){body.innerHTML='<div class="empty">🐾<br>Tu carrito está vacío.<br>¡Elegí la receta para tu peludo!</div>'}
+    else{
+      body.innerHTML=ids.map(function(id){var p=prod(id);
+        return '<div class="line"><div class="em" style="background:'+p.color+'">'+p.emoji+'</div><div><b>'+p.nombre+'</b><small>'+p.kg+' · '+money(p.precio)+'</small>'+
+        '<div class="qty"><button data-dec="'+id+'" aria-label="Quitar uno">−</button><span>'+cart[id]+'</span><button data-inc="'+id+'" aria-label="Agregar uno"'+(disponible(id)<=0?' disabled':'')+'>+</button></div></div>'+
+        '<b>'+money(p.precio*cart[id])+'</b></div>'}).join('');
+    }
+    var t=cartTotal();
+    $('#cartTotal').textContent=money(t);
+    $('#freeMsg').textContent=!t?'':(t>=ENVIO_GRATIS?'🎉 ¡Tenés envío gratis!':'Te faltan '+money(ENVIO_GRATIS-t)+' para el envío gratis');
+    $('#checkoutBtn').disabled=!t;
+    renderProducts();
+  }
+  function openCart(o){
+    $('#drawer').classList.toggle('open',o);$('#overlay').classList.toggle('open',o);
+    $('#drawer').setAttribute('aria-hidden',!o);
+    if(o)renderCart();
+  }
+
+  /* ===== Checkout ===== */
+  function openModal(id,o){$(id).classList.toggle('open',o)}
+  function startCheckout(){
+    if(!cartTotal())return;
+    $('#coTotal').textContent=money(cartTotal());
+    $('#coForm').hidden=false;$('#coOk').hidden=true;$('#formErr').textContent='';
+    openCart(false);openModal('#checkoutModal',true);
+    setTimeout(function(){$('#fNombre').focus()},50);
+  }
+  function confirmOrder(e){
+    e.preventDefault();
+    var n=$('#fNombre').value.trim(),t=$('#fTel').value.trim(),m=$('#fMail').value.trim(),d=$('#fDir').value.trim();
+    if(!n||!t||!m||!d){$('#formErr').textContent='Completá todos los datos para confirmar.';return}
+    if(!/^\S+@\S+\.\S+$/.test(m)){$('#formErr').textContent='Revisá el formato del email.';return}
+    // Releer stock por si cambió en otra pestaña
+    var fresh=safeGet(KEY);if(fresh&&fresh.stock)db=fresh;
+    var falta=Object.keys(cart).filter(function(k){return cart[k]>db.stock[k]});
+    if(falta.length){
+      clampCart();saveCart();renderCart();
+      $('#formErr').textContent='Se agotó stock de alguna receta mientras comprabas. Revisá tu carrito.';
+      return;
+    }
+    var total=cartTotal();
+    Object.keys(cart).forEach(function(k){db.stock[k]-=cart[k];db.sold[k]=(db.sold[k]||0)+cart[k]});
+    db.revenue+=total;db.orders+=1;safeSet(KEY,db);
+    cart={};saveCart();
+    $('#okMsg').textContent='Gracias, '+n.split(' ')[0]+'. Te escribimos al '+t+' para coordinar el pago y la entrega. Total: '+money(total)+'.';
+    $('#coForm').hidden=true;$('#coOk').hidden=false;
+    $('#form').reset();renderCart();
+  }
+
+  /* ===== Panel de stock ===== */
+  function renderAdmin(){
+    $('#adminRows').innerHTML=CATALOGO.map(function(p){
+      return '<tr><td>'+p.emoji+' '+p.nombre+'</td><td><b>'+db.stock[p.id]+'</b></td><td>'+(db.sold[p.id]||0)+'</td>'+
+      '<td><button class="mini" data-rest="'+p.id+'" data-n="5">+5</button> <button class="mini" data-rest="'+p.id+'" data-n="10">+10</button></td></tr>'}).join('');
+    $('#adRev').textContent=money(db.revenue);$('#adOrders').textContent=db.orders;
+  }
+
+  /* ===== Eventos ===== */
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('button,a,[data-close]');if(!el)return;
+    if(el.dataset.add){
+      if(disponible(el.dataset.add)<=0)return;
+      cart[el.dataset.add]=(cart[el.dataset.add]||0)+1;renderCart();toast('Agregado al carrito 🐾');
+    }else if(el.dataset.inc){if(disponible(el.dataset.inc)>0){cart[el.dataset.inc]++;renderCart()}}
+    else if(el.dataset.dec){cart[el.dataset.dec]--;if(cart[el.dataset.dec]<=0)delete cart[el.dataset.dec];renderCart()}
+    else if(el.dataset.rest){db.stock[el.dataset.rest]+=Number(el.dataset.n);safeSet(KEY,db);renderAdmin();renderCart()}
+    else if(el.hasAttribute('data-close')){openModal('#checkoutModal',false);openModal('#adminModal',false)}
+  });
+  $('#openCart').onclick=function(){openCart(true)};
+  $('#closeCart').onclick=function(){openCart(false)};
+  $('#overlay').onclick=function(){openCart(false)};
+  $('#checkoutBtn').onclick=startCheckout;
+  $('#form').addEventListener('submit',confirmOrder);
+  $('#openAdmin').onclick=function(){renderAdmin();openModal('#adminModal',true)};
+  $('#resetAll').onclick=function(){if(confirm('¿Reiniciar stock y ventas de demostración?')){initDb();cart={};saveCart();renderAdmin();renderCart()}};
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){openCart(false);openModal('#checkoutModal',false);openModal('#adminModal',false)}});
+  window.addEventListener('storage',function(e){ // sincroniza entre pestañas
+    if(e.key===KEY){var f=safeGet(KEY);if(f)db=f;renderCart()}
+  });
+
+  $('#year').textContent=new Date().getFullYear();
+  renderCart();
+})();
+</script>
+</body>
+</html>
